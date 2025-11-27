@@ -1,0 +1,493 @@
+/* استایل‌های عمومی */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 76px; /* برای فیکس شدن نوار ناوبری */
+}
+
+/* استایل‌های صفحه اصلی */
+.hero-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding-top: 2rem;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card {
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+/* استایل‌های جدید برای نوارهای پیشرفت مهارت */
+.skills-progress-card {
+    border: 1px solid #e9ecef;
+}
+
+.skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    margin-bottom: 2rem;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.skill-name {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.skill-percentage {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), #4dabf7);
+    border-radius: 10px;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255,255,255,0.4), 
+        transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* استایل‌های صفحه تماس */
+.contact-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.contact-item {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(-5px);
+}
+
+.contact-form {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* استایل‌های جدید صفحه تماس */
+.social-card {
+    border: 1px solid #e9ecef;
+}
+
+.social-item {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background: #f8f9fa;
+}
+
+.social-item:hover {
+    transform: translateY(-5px);
+    border-color: #0d6efd;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.social-link {
+    color: inherit;
+}
+
+.social-link:hover {
+    color: inherit;
+}
+
+/* رنگ‌های خاص برای هر پلتفرم */
+.social-item .fa-github {
+    color: #333;
+}
+
+.social-item .fa-telegram {
+    color: #0088cc;
+}
+
+.social-item .fa-instagram {
+    color: #e4405f;
+}
+
+.social-item .fa-envelope {
+    color: #ea4335;
+}
+
+.social-item:hover .fa-github {
+    color: #4078c0;
+}
+
+.social-item:hover .fa-telegram {
+    color: #0088cc;
+}
+
+.social-item:hover .fa-instagram {
+    color: #e4405f;
+}
+
+.social-item:hover .fa-envelope {
+    color: #ea4335;
+}
+
+.quick-actions .btn {
+    transition: all 0.3s ease;
+}
+
+.quick-actions .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* استایل‌های صفحه احراز هویت */
+.auth-body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.auth-section {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+}
+
+.auth-tabs .nav-tabs .nav-link {
+    color: #6c757d;
+    border: none;
+    padding: 10px 20px;
+}
+
+.auth-tabs .nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    background: transparent;
+}
+
+.auth-form {
+    border-radius: 10px;
+}
+
+/* استایل‌های صفحه مدارک */
+.certificates-hero {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.certificate-card {
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* استایل‌های صفحه نمونه کارها */
+.portfolio-hero {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+.portfolio-filter .nav-link {
+    color: #6c757d;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.portfolio-filter .nav-link.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    background: transparent;
+}
+
+.portfolio-card {
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.tech-tags .badge {
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+/* استایل‌های عمومی برای صفحات */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* استایل‌های عمومی برای دکمه‌ها */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* استایل‌های کارت‌ها */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* استایل‌های ناوبری */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+/* استایل‌های فوتر */
+footer {
+    margin-top: auto;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    /* صفحه اصلی */
+    .hero-section .row {
+        text-align: center;
+    }
+    
+    .profile-img {
+        width: 200px;
+        height: 200px;
+        margin-top: 2rem;
+    }
+    
+    .skills-progress-card {
+        padding: 2rem !important;
+    }
+    
+    .skill-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    /* صفحه تماس */
+    .contact-form {
+        padding: 2rem !important;
+    }
+    
+    .social-card,
+    .contact-info {
+        padding: 2rem !important;
+    }
+    
+    .quick-actions .btn {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    
+    .social-item {
+        padding: 1.5rem !important;
+    }
+    
+    /* صفحه احراز هویت */
+    .auth-tabs .nav-tabs .nav-link {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* صفحه نمونه کارها */
+    .portfolio-filter .nav-link {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* عمومی */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    /* صفحه اصلی */
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .skill-name {
+        font-size: 1rem;
+    }
+    
+    .skill-percentage {
+        font-size: 0.9rem;
+    }
+    
+    /* دکمه‌ها */
+    .btn-lg {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    /* کارت‌ها */
+    .card-body {
+        padding: 1rem;
+    }
+    
+    /* تایپوگرافی */
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* انیمیشن‌های اضافی */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* استایل برای اسکرول نرم */
+html {
+    scroll-behavior: smooth;
+}
+
+/* استایل‌های utility */
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.box-shadow {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
