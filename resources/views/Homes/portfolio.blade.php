@@ -52,7 +52,7 @@
                             <div class="card portfolio-card h-100 shadow">
                                 <!-- تصویر -->
                                 @if ($portfolio->image)
-                                    <img src="{{ asset('storage/' . $portfolio->image) }}" class="card-img-top"
+                                    <img src="{{ asset('laravel_portfolio/storage/app/public/' . $portfolio->image) }}" class="card-img-top"
                                         alt="{{ $portfolio->title }}" style="height: 200px; object-fit: cover;">
                                 @else
                                     <div class="card-img-top bg-light d-flex align-items-center justify-content-center"

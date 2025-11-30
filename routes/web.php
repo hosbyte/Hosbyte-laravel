@@ -37,20 +37,20 @@ Route::middleware(['auth'])->prefix('admin')->group(function() {
     Route::get('/dashboard' , [AdminController::class , 'dashboard'])->name('admin.dashboard');
 
     // ? certificate route
-    Route::get('/admin/certificates' , [CertificateController::class , 'adminindex'])->name('admin.certificates.index');
-    Route::get('/admin/certificates/create' , [CertificateController::class , 'create'])->name('admin.certificates.create');
-    Route::post('/admin/certificates', [CertificateController::class, 'store'])->name('admin.certificates.store');
-    Route::get('/admin/certificates/{id}/edit' , [CertificateController::class , 'edit'])->name('admin.certificates.edit');
-    Route::put('/admin/certificates/{id}' , [CertificateController::class , 'update'])->name('admin.certificates.update');
-    Route::delete('/admin/certificates/{id}' , [CertificateController::class , 'destroy'])->name('admin.certificates.destroy');
+    Route::get('/certificates' , [CertificateController::class , 'adminindex'])->name('admin.certificates.index');
+    Route::get('/certificates/create' , [CertificateController::class , 'create'])->name('admin.certificates.create');
+    Route::post('/certificates', [CertificateController::class, 'store'])->name('admin.certificates.store');
+    Route::get('/certificates/{id}/edit' , [CertificateController::class , 'edit'])->name('admin.certificates.edit');
+    Route::put('/certificates/{id}' , [CertificateController::class , 'update'])->name('admin.certificates.update');
+    Route::delete('/certificates/{id}' , [CertificateController::class , 'destroy'])->name('admin.certificates.destroy');
 
     // ? portfolio route
-    Route::get('/admin/portfolios', [PortfolioController::class, 'adminindex'])->name('admin.portfolios.index');
-    Route::get('/admin/portfolios/create', [PortfolioController::class, 'create'])->name('admin.portfolios.create');
-    Route::post('/admin/portfolios', [PortfolioController::class, 'store'])->name('admin.portfolios.store');
-    Route::get('/admin/portfolios/{id}/edit', [PortfolioController::class, 'edit'])->name('admin.portfolios.edit');
-    Route::put('/admin/portfolios/{id}', [PortfolioController::class, 'update'])->name('admin.portfolios.update');
-    Route::delete('/admin/portfolios/{id}', [PortfolioController::class, 'destroy'])->name('admin.portfolios.destroy');
+    Route::get('/portfolios', [PortfolioController::class, 'adminindex'])->name('admin.portfolios.index');
+    Route::get('/portfolios/create', [PortfolioController::class, 'create'])->name('admin.portfolios.create');
+    Route::post('/portfolios', [PortfolioController::class, 'store'])->name('admin.portfolios.store');
+    Route::get('/portfolios/{id}/edit', [PortfolioController::class, 'edit'])->name('admin.portfolios.edit');
+    Route::put('/portfolios/{id}', [PortfolioController::class, 'update'])->name('admin.portfolios.update');
+    Route::delete('/portfolios/{id}', [PortfolioController::class, 'destroy'])->name('admin.portfolios.destroy');
 });
 
 Route::get('/Login' , [LoginController::class , 'showLoginForm'])->name('Login');

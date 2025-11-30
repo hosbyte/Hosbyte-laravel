@@ -50,7 +50,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>
                                         @if ($portfolio->image)
-                                            <img src="{{ asset('storage/' . $portfolio->image) }}"
+                                            <img src="{{ asset('laravel_portfolio/storage/app/public/' . $portfolio->image) }}"
                                                 alt="{{ $portfolio->title }}" class="rounded" width="50" height="50"
                                                 style="object-fit: cover;">
                                         @else

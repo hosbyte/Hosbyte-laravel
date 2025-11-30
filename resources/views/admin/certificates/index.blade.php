@@ -60,7 +60,7 @@
                                             </div>
                                         @endif --}}
                                         @if ($certificate->image)
-                                            <img src="{{ asset('storage/' . $certificate->image) }}"
+                                            <img src="{{ asset('laravel_portfolio/storage/app/public/' . $certificate->image) }}"
                                                 alt="{{ $certificate->title }}" class="rounded" width="50"
                                                 height="50" style="object-fit: cover;">
                                         @else

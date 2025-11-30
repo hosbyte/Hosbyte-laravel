@@ -26,8 +26,7 @@
                         <div class="col-md-4 mb-4">
                             <div class="card">
                                 @if ($certificate->image)
-                                    <img src="{{ asset('storage/' . $certificate->image) }}" alt="{{ $certificate->title }}"
-                                        class="card-img-top">
+                                        <img src="{{ asset('laravel_portfolio/storage/app/public/' . $certificate->image) }}">
                                 @endif
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $certificate->title }}</h5>

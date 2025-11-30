@@ -12,7 +12,7 @@
                     <div class="col-lg-6">
                         <h1 class="display-4 fw-bold mb-4">سلام، من <span class="text-primary">حسین سلیمانی</span> هستم</h1>
                         <p class="lead mb-4">
-                            توسعه‌دهنده بک‌اند با تخصص در Laravel و PHP.
+                            توسعه‌دهنده بک‌اند با Laravel و PHP.
                             عاشق حل مسائل پیچیده و ساخت اپلیکیشن‌های وب .
                             تجربه کار با MySQL , معماری MVC و سیستم‌های مدرن توسعه نرم‌افزار.
                         </p>
